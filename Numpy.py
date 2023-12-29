@@ -63,3 +63,4 @@ print(l1.max())
 print(l1.mean())
 print(np.median(l1))
 
+

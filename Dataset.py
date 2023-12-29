@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 data = pd.Series([["USA",100,20],["India",120,30],["China",100,200],["xpz",100,200],["xpz",100,200],["xpz",100,200],["xpz",100,200]])
 
 df = pd.DataFrame(data)
@@ -11,9 +11,17 @@ print(df.max())
 print(df.info())
 df.to_csv("temp.csv",index=False)
 
-cols = ["Country","Price","Age"]
-data = pd.read_csv("temp.csv",names=cols)
-df = pd.DataFrame(data)
+data = [["USA",100,20],["India",120,30],["China",100,200],["xpz",100,200],["xpz",100,200],["xpz",100,200],["xpz",100,200]]
+df = pd.DataFrame(data,columns=["country",'age',"price"])
+print(df['country'])
 print(df.head())
+print(df.T)
+print(df.drop_duplicates())
 arr = df.to_numpy()
-print(arr)
+print(df.dtypes)
+print(df.loc[1:2])
+# print(arr)
+plt.plot(df['age'],df['price'])
+
+
+# %%

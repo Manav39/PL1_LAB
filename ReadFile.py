@@ -40,7 +40,7 @@ def delete_file(filename):
  
  
 if __name__ == '__main__':
-    filename = "example.txt"
+    filename = "sent.txt"
     new_filename = "new_example.txt"
  
     create_file(filename)
